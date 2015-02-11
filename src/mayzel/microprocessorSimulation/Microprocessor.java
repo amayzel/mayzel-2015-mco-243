@@ -52,7 +52,7 @@ public class Microprocessor {
 				if (hex.length() > 1) {
 					B = String.valueOf(hex.charAt(0));
 					A = String.valueOf(hex.charAt(1));
-				}// issues with ff and A-reg 2x
+				}
 				else {
 					A = String.valueOf(hex.charAt(0));
 					B = "0";
