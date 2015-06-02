@@ -1,4 +1,4 @@
-package mayzel.os.scheduler;
+package mayzel.scheduler;
 
 public class FakeProcess {
 

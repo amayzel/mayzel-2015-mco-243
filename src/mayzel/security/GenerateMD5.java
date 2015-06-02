@@ -1,4 +1,4 @@
-package mayzel.os.security;
+package mayzel.security;
 
 import java.util.Scanner;
 
