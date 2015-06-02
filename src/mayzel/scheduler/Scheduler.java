@@ -1,19 +1,17 @@
 package mayzel.scheduler;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Scheduler {
 
 	private static final int QUANTUM = 10;
+	private List<FakeProcess> list;
+	private SchedulerAlgorithm algorithm;
 	
-	List<FakeProcess> list;
-	SchedulerAlgorithm algorithm;
-	
-	public Scheduler(SchedulerAlgorithm algorithm) {
+	public Scheduler(SchedulerAlgorithm algorithm,List<FakeProcess> list) {
 		
 		this.algorithm = algorithm;
-		list = new ArrayList<FakeProcess>();
+		this.list = list;
 				
 	}
 	
@@ -26,6 +24,9 @@ public class Scheduler {
 			
 			if(process.isStillRunning()){
 				list.add(process);
+			}
+			if(list.isEmpty()){
+				break;
 			}
 		}
 	}
